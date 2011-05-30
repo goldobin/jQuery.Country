@@ -1,19 +1,27 @@
 /*!
+ * jQuery.Country plugin.
+ *
  * Copyright 2011, Oleksandr Goldobin.
  * Licensed under GPL version 2 license.
+ *
+ * Plugin provides easy way to manipulate country's province
+ * selects and inputs. Complementary province lists can be plugged
+ * separately by calling $.country.provinces() function.
  */
 
 (function($) {
 
 var defaults = {
-    province: "",
+    province: "", /* preselected province id */
     provinceSelect: "select.province-select",
     provinceSelectHolder: ".province-select-holder",
     provinceInput: "input.province-text",
     provinceInputHolder: ".province-text-holder",
+    /* Animation effect to use while showing holder */
     showFn: function(e, fn) {
         e.show(fn);
     },
+    /* Animation effect to use while hiding holder */
     hideFn: function(e, fn) {
         e.hide(fn);
     }

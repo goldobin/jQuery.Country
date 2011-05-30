@@ -1,4 +1,6 @@
-/*
+/*!
+ * Complementary US state list for jQuery.Country plugin.
+ *
  * Copyright 2011, Oleksandr Goldobin.
  * Licensed under GPL version 2 license.
  */
