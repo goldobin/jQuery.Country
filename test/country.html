@@ -1,0 +1,43 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <title>jQuery country plugin</title>
+</head>
+<body>
+    <h1>Profile</h1>
+    <form class="profile" action="">
+        <div class="country">
+            <label for="country">Country:</label>
+            <select id="country" name="country">
+                <option value="" selected="selected">Please select</option>
+                <option value="UA">Ukraine</option>
+                <option value="CA">Canada</option>
+                <option value="RU">Russia</option>
+                <option value="US">United States</option>
+            </select>
+        </div>
+        <div class="province-select-holder">
+            <label for="province-select">Province:</label>
+            <select id="province-select" name="province-id" class="province-select">
+                <option value="">Please select</option>
+            </select>
+        </div>
+        <div class="province-text-holder" style="display: none">
+            <label for="province-text">Province:</label>
+            <input id="province-text" name="province-name" class="province-text"/>
+        </div>
+    </form>
+
+    <script type="text/javascript" src="../lib/jquery-1.4.4.js"></script>
+    <script type="text/javascript" src="../src/jquery.country.js"></script>
+    <script type="text/javascript" src="../src/jquery.country-US.en.js"></script>
+    <script type="text/javascript" src="../src/jquery.country-CA.en.js"></script>
+    <script type="text/javascript">
+        $.country.provinces("UA", true);
+        $(function() {
+            $("#country").country();
+        })
+    </script>
+</body>
+</html>
